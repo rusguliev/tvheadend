@@ -493,9 +493,9 @@ http_m3u_playlist_add(htsbuf_queue_t *hq, const char *hostpath,
   htsbuf_append_str(hq, "#EXTINF:-1");
   if (logo) {
     if (strncmp(logo, "imagecache/", 11) == 0)
-      htsbuf_qprintf(hq, " logo=\"%s/%s\"", hostpath, logo);
+      htsbuf_qprintf(hq, " tvg-logo=\"%s/%s\"", hostpath, logo);
     else
-      htsbuf_qprintf(hq, " logo=\"%s\"", logo);
+      htsbuf_qprintf(hq, " tvg-logo=\"%s\"", logo);
   }
   if (epgid)
     htsbuf_qprintf(hq, " tvg-id=\"%s\"", epgid);
